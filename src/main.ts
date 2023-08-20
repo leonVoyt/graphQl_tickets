@@ -1,4 +1,4 @@
-import { schema } from './types/graphTypes.js'
+import { schema } from './schem/schema.js'
 import { resolvers } from './resolvers/mainResolve.js'
 import express from 'express'
 import { graphqlHTTP } from 'express-graphql'
@@ -18,3 +18,4 @@ const PORT = process.env.PORT || 4000
 app.listen(PORT, () => {
   console.log(`Server ready at http://localhost:${PORT}`)
 })
+// })
