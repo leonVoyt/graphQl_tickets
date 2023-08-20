@@ -7,5 +7,5 @@ export interface Tickets {
   Price: number
 }
 export interface ZoneQuary {
-  zoneQuary: number
+  ZoneId: number
 }

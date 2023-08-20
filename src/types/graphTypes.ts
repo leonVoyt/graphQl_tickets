@@ -1,20 +1,17 @@
-import { gql } from 'apollo-server-express'
-export const typeDefs = gql`
+import { buildSchema } from 'graphql'
+export const schema = buildSchema(`
   type Ticket {
     Section: String
     SeatNumber: String
     Zone: String
     SeatRow: String
     Price: Int
-    ZoneId: Int
   }
 
-  input ZoneQuary {
-    ZoneId: Int
-  }
 
   type Query {
     getTickets: [Ticket]
-    getTicketsByZone(zoneQuary: ID!): [Ticket]
+    getTicketsByZone(ZoneId: Int): [Ticket]
   }
-`
+
+`)
